@@ -1,0 +1,7 @@
+<div class="tags-wrapper">
+    <div class="tags">
+        <a *ngFor="let i of tags" routerLink="/tags/{{i.name}}" class="">
+            {{i.name}}&nbsp;&nbsp;<div class="count">{{i.count}}</div>
+        </a>
+    </div>
+</div>

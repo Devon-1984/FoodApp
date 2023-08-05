@@ -1,0 +1,56 @@
+
+<div class="container-lg ">
+
+  <app-tags></app-tags>
+
+  <ul class="row g-4 mt-3">
+    <li *ngFor="let i of foods" class="col-lg-4 col-md-6 col-sm-12 ">
+      <div class="card">
+        <div class="img-wrapper">
+          <img
+            src="{{ i.imageUrl }}"
+            alt="food{{ i }}"
+            width="100%"
+            height="300px"
+            loading="lazy"
+          />
+        </div>
+        <div class="content">
+          <div class="header">
+            <div class="name">
+              {{ i.name }}
+            </div>
+            <div class="veg {{i.veg? '':'not'}}">
+              <!-- <div class="vegimg"></div> -->
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="stars {{i.favorite? '':'not'}}">
+                <div class="rating" *ngFor="let j of i.star">
+            ⭐
+          </div>
+            </div>
+             
+          <div class="cardh {{i.favorite? '':'not'}}">
+            <p class="card_header">Best Selling</p>
+          </div>
+          </div>
+         
+          <div class="tags">
+            <span *ngFor="let o of i.tags">{{ o }} </span>
+          </div>
+          <div class="item-footer">
+            <div class="cook-time">
+              <span>⏱️</span><span> {{ i.cookTime }} min</span>
+            </div>
+            <div class="price">
+              <span>₹ {{ i.price }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

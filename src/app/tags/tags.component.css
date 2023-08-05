@@ -1,0 +1,32 @@
+.tag-wrapper {
+}
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tags a {
+  display: inline;
+  font-size: 18px;
+  border-radius: 1000px;
+  margin: 8px 5px;
+  padding: 10px 10px 10px 15px;
+  color: white;
+  background-color: #3d506d;
+  transition: 0.5s ease;
+  box-shadow: 1px 1px 10px rgba(65, 65, 65, 0.24);
+}
+.count {
+  display: inline;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 4px 10px 4px 10px;
+  border-radius: 100px;
+}
+.tags a:hover {
+  background-color: #6c8dc5;
+}
+
+.tags a:active {
+  transform: scale(0.9);
+}
